@@ -15,8 +15,7 @@ const findKey = function(object1, callback) {
   for (let i = 0; i < keys.length; i++) {
     const key = keys[i];
     if (callback(object1[key])) {
-      result = key;
-      break; //no need to keep looking if result is already found
+      return key;
     }
   }
   return result;
