@@ -1,5 +1,3 @@
-const assertEqual = require('./assertEqual');
-
 //Instruction
 //Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 // cannot compare two arrays directly (arr1 === arr2 would be too easy lol)
@@ -22,9 +20,4 @@ const eqArrays = function(arr1, arr2) {
 };
 
 module.exports = eqArrays;
-
-/*assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // => false
-
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true); // => true
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), false); // => false*/
+//test files in eqArraysTest.js
