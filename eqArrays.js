@@ -6,6 +6,8 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+
+
 //Instruction
 //Implement a function eqArrays which takes in two arrays and returns true or false, based on a perfect match.
 // cannot compare two arrays directly (arr1 === arr2 would be too easy lol)
