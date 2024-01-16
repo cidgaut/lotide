@@ -1,39 +1,30 @@
-//const assertArraysEqual = require('../assertArraysEqual')
 const middle = require('../middle');
 const assert = require('chai').assert;
 
+//the purpose of this test code is to obtain the middle item in the array
 describe("#middle", () => {
 
-  it("", () => {
+  it("Should return empty if there is only one number in array", () => {
     assert.deepEqual(middle([1]), []);
   });
 
-  it("", () => {
+  it("Should return empty if there are only two number in array", () => {
     assert.deepEqual(middle([1, 2]), []); 
   });
 
-  it("", () => {
+  it("Should return the single middle value if the array is uneven", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);
   });
 
-  it("", () => {
+  it("Should return the single middle value if the array is uneven", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
   });
 
-  it("", () => {
+  it("Should return the two middle values if the array is even", () => {
     assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]); 
   });
 
-  it("", () => {
+  it("Should return the two middle values if the array is even", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
   });
 });
-
-assertArraysEqual(middle([1]), []); // => []
-assertArraysEqual(middle([1, 2]), []); // => []
-
-assertArraysEqual(middle([1, 2, 3]), [2]); // => [2]
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // => [3]
-
-assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]) // => [2, 3]
-assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4] ) // => [3, 4]
