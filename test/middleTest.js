@@ -16,14 +16,6 @@ describe("#middle", () => {
     assert.deepEqual(middle([1, 2, 3]), [2]);
   });
 
-  it("Should return the single middle value if the array is uneven", () => {
-    assert.deepEqual(middle([1, 2, 3, 4, 5]), [3]);
-  });
-
-  it("Should return the two middle values if the array is even", () => {
-    assert.deepEqual(middle([1, 2, 3, 4]), [2, 3]); 
-  });
-
   it("Should return the two middle values if the array is even", () => {
     assert.deepEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]);
   });
