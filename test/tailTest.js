@@ -1,31 +1,24 @@
-
-//const assertEqual = require('../assertEqual')
 const tail = require('../tail');
 const assert = require('chai').assert;
 
 describe("#tail", () => {
 
   it("Should be empty if the tail of an empty array", () => {
-    assert.deepEqual(tail([]), 0);
+    assert.deepEqual(tail([]), []);
   });
 
   it("Should be empty if only one element", () => {
-    assert.deepEqual(tail(['test']), 0); 
+    assert.deepEqual(tail(['test']), []); 
   });
 
-  /*it("returns ", () => {
-    assert.strictEqual(tail([5,6,7]), 5); 
+  it("Should return the tail of an array with multiple elements", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
   });
 
-  it("", () => {
-    assert.strictEqual(tail(["Hello", "Lighthouse", "Labs"]), 'Hello'); 
-  });*/
+  it("Should not modify the original array", () => {
+    const originalArray = [1, 2, 3];
+    tail(originalArray);
+    assert.deepEqual(originalArray, [1, 2, 3]);
+  });
 });
 
-// Test Case: Check the original array
-//const words = ["Yo Yo", "Lighthouse", "Labs"];
-//const result = tail(words);
-//assertEqual(result.join(', '), "Lighthouse, Labs"); // Use join to convert the array to a string
-
-//assertEqual(tail(["test"]).length, 0); // tail of array with one element only should be empty
-//assertEqual(tail([]).length, 0); // tail of an empty array should also be empty
