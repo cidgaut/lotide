@@ -20,5 +20,8 @@ describe("#tail", () => {
     tail(originalArray);
     assert.deepEqual(originalArray, [1, 2, 3]);
   });
+  
+  it("Should return the last element if there are only two elements", () => {
+    assert.deepEqual(tail([1, 2]), [2]); 
+  });
 });
-
