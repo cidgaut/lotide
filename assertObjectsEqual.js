@@ -44,7 +44,7 @@ const assertObjectsEqual = function(actual, expected) {
 
 const cup1 = { color: "white", size: "small"};
 const cup2 = { color: "white", size: "small"};
-assertObjectsEqual(eqObjects(cup1, cup2), true); 
+assertObjectsEqual(cup1, cup2); 
 
 const bigTravelMug = { color: "Green", size: "Probably not fit for travel, but whatever", owner: "Kyle's"}
-assertObjectsEqual(eqObjects(cup1, bigTravelMug), false);
+assertObjectsEqual(cup1, bigTravelMug);
