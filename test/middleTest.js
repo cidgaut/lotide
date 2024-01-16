@@ -9,7 +9,7 @@ describe("#middle", () => {
   });
 
   it("Should return empty if there are only two number in array", () => {
-    assert.deepEqual(middle([1, 2]), []); 
+    assert.deepEqual(middle([1, 2]), []);
   });
 
   it("Should return the single middle value if the array is uneven", () => {

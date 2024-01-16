@@ -8,7 +8,7 @@ describe("#tail", () => {
   });
 
   it("Should be empty if only one element", () => {
-    assert.deepEqual(tail(['test']), []); 
+    assert.deepEqual(tail(['test']), []);
   });
 
   it("Should return the tail of an array with multiple elements", () => {
@@ -22,6 +22,6 @@ describe("#tail", () => {
   });
   
   it("Should return the last element if there are only two elements", () => {
-    assert.deepEqual(tail([1, 2]), [2]); 
+    assert.deepEqual(tail([1, 2]), [2]);
   });
 });
