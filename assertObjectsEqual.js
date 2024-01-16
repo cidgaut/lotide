@@ -31,12 +31,9 @@ const eqObjects = function(object1, object2) {
   }
   return sameObjects;
 };
-////////////////////////////
-//assertArraysEqual for refence. change arrays for objects.
-const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = function(actual, expected) {
-  const isEqual = eqArrays(actual, expected);
+const assertObjectsEqual = function(actual, expected) {
+  const isEqual = eqObjects(actual, expected);
   
   if (isEqual) {
     console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
@@ -44,3 +41,10 @@ const assertArraysEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
   }
 };
+
+const cup1 = { color: "white", size: "small"};
+const cup2 = { color: "white", size: "small"};
+assertObjectsEqual(eqObjects(cup1, cup2), true); 
+
+const bigTravelMug = { color: "Green", size: "Probably not fit for travel, but whatever", owner: "Kyle's"}
+assertObjectsEqual(eqObjects(cup1, bigTravelMug), false);
