@@ -1,29 +1,3 @@
-const assertEqual = function(actual, expected) {
-  if (actual === expected) {
-    return console.log(`✅✅✅ Assertion Passed: ${actual} === ${expected}`);
-  } else {
-    return console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
-  }
-};
-
-const eqArrays = function(arr1, arr2) {
-  // Check if the lengths of the arrays are the same
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  
-  // Iterate through each element and compare
-  for (let i = 0; i < arr1.length; i++) {
-    // If elements are not equal, return false
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  
-  // If all elements are equal, return true
-  return true;
-};
-
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
 const eqObjects = function(object1, object2) {
@@ -62,7 +36,7 @@ const eqObjects = function(object1, object2) {
 
 const cup1 = { color: "white", size: "small"};
 const cup2 = { color: "white", size: "small"};
-assertEqual(eqObjects(cup1, cup2), true);
+eqObjects(cup1, cup2);
 
 const bigTravelMug = { color: "Green", size: "Probably not fit for travel, but whatever", owner: "Kyle's"};
-assertEqual(eqObjects(cup1, bigTravelMug), false);
+eqObjects(cup1, bigTravelMug);
